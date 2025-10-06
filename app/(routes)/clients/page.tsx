@@ -122,7 +122,7 @@ export default function ClientsPage() {
   };
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto py-6 md:py-10 px-4">
       <Card className="max-w-2xl mx-auto card-glow animate-fade-in">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-2xl">
@@ -254,6 +254,7 @@ export default function ClientsPage() {
               Nenhum cliente cadastrado.
             </p>
           ) : (
+            <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
             <Table>
               <TableHeader>
                 <TableRow>
@@ -272,6 +273,7 @@ export default function ClientsPage() {
                 ))}
               </TableBody>
             </Table>
+            </div>
           )}
         </CardContent>
       </Card>

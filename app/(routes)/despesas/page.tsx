@@ -137,7 +137,7 @@ export default function DespesasPage() {
   };
 
   return (
-    <div className="container mx-auto py-10 space-y-8">
+    <div className="container mx-auto py-6 md:py-10 px-4 space-y-6 md:space-y-8">
       {/* Card: Formulário de Nova Despesa */}
       <Card className="max-w-2xl mx-auto card-glow animate-fade-in">
         <CardHeader>
@@ -285,6 +285,7 @@ export default function DespesasPage() {
               Nenhuma despesa registrada.
             </p>
           ) : (
+            <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
             <Table>
               <TableHeader>
                 <TableRow>
@@ -317,6 +318,7 @@ export default function DespesasPage() {
                 ))}
               </TableBody>
             </Table>
+            </div>
           )}
         </CardContent>
       </Card>

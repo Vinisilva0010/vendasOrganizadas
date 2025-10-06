@@ -206,7 +206,7 @@ export default function ParcelasPage() {
   };
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto py-6 md:py-10 px-4">
       <Card className="max-w-6xl mx-auto card-glow animate-fade-in">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-2xl">
@@ -227,6 +227,7 @@ export default function ParcelasPage() {
               Nenhuma parcela pendente.
             </p>
           ) : (
+            <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
             <Table>
               <TableHeader>
                 <TableRow>
@@ -257,19 +258,21 @@ export default function ParcelasPage() {
                       {format(new Date(installment.dueDate), "dd/MM/yyyy")}
                     </TableCell>
                     <TableCell className="text-center">
-                      <div className="flex gap-2 justify-center">
+                      <div className="flex gap-1 md:gap-2 justify-center flex-nowrap">
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={() => handleOpenEditDialog(installment)}
+                          className="px-2"
                         >
                           <Pencil className="h-4 w-4" />
                         </Button>
                         <Button
                           size="sm"
                           onClick={() => handleMarkAsPaid(installment.$id)}
+                          className="text-xs md:text-sm whitespace-nowrap"
                         >
-                          Marcar como Pago
+                          Pagar
                         </Button>
                       </div>
                     </TableCell>
@@ -277,6 +280,7 @@ export default function ParcelasPage() {
                 ))}
               </TableBody>
             </Table>
+            </div>
           )}
         </CardContent>
       </Card>

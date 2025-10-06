@@ -205,25 +205,25 @@ export default function DashboardPage() {
   }, []);
 
   return (
-    <div className="container mx-auto py-10">
-      <div className="mb-8 flex items-center justify-between">
+    <div className="container mx-auto py-6 md:py-10 px-4">
+      <div className="mb-6 md:mb-8 space-y-4 md:space-y-0 md:flex md:items-center md:justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-          <p className="text-muted-foreground">
+          <h1 className="text-2xl md:text-3xl font-bold tracking-tight">Dashboard</h1>
+          <p className="text-sm md:text-base text-muted-foreground">
             Visão geral do seu sistema de gestão de vendas
           </p>
         </div>
         
         {/* Botões de Ação Rápida */}
-        <div className="flex gap-3">
-          <Button asChild className="glow-cyan-hover">
+        <div className="flex flex-wrap gap-2 md:gap-3">
+          <Button asChild className="glow-cyan-hover flex-1 md:flex-none" size="sm">
             <a href="/vendas/nova">💫 Nova Venda</a>
           </Button>
-          <Button variant="outline" asChild className="hover:border-primary hover:text-primary transition-all">
-            <a href="/despesas">📝 Nova Despesa</a>
+          <Button variant="outline" asChild className="hover:border-primary hover:text-primary transition-all flex-1 md:flex-none" size="sm">
+            <a href="/despesas">📝 Despesa</a>
           </Button>
-          <Button variant="secondary" asChild className="hover:bg-primary hover:text-primary-foreground transition-all">
-            <a href="/guia">📚 Ver Guia</a>
+          <Button variant="secondary" asChild className="hover:bg-primary hover:text-primary-foreground transition-all w-full md:w-auto" size="sm">
+            <a href="/guia">📚 Guia</a>
           </Button>
         </div>
       </div>

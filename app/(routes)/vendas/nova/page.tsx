@@ -162,7 +162,7 @@ export default function NovaVendaPage() {
   };
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto py-6 md:py-10 px-4">
       <Card className="max-w-2xl mx-auto card-glow animate-fade-in">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-2xl">

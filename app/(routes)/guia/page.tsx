@@ -12,8 +12,8 @@ import Link from "next/link";
 
 export default function GuiaPage() {
   return (
-    <div className="container mx-auto py-10">
-      <div className="max-w-5xl mx-auto space-y-8">
+    <div className="container mx-auto py-6 md:py-10 px-4">
+      <div className="max-w-5xl mx-auto space-y-6 md:space-y-8">
         {/* Header */}
         <div className="text-center space-y-4 animate-fade-in">
           <h1 className="text-4xl font-bold text-primary flex items-center justify-center gap-3">
