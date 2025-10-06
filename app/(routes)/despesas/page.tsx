@@ -47,7 +47,7 @@ import {
 const expenseSchema = z.object({
   description: z.string().min(3, "A descrição deve ter no mínimo 3 caracteres"),
   value: z.number().min(0.01, "O valor deve ser maior que zero"),
-  expenseDate: z.date({ required_error: "Selecione a data da despesa" }),
+  expenseDate: z.date(),
   category: z.string().optional().or(z.literal("")),
 });
 
